@@ -1,0 +1,201 @@
+//tax calculation
+import java.util.*;
+abstract class person
+{
+   String name;
+    String gender;
+    int aadhar;
+    double income;
+    double tax; 
+ abstract void getinformation ();
+   abstract void CalculateTax ();
+   void show()
+   {
+     Scanner obj = new Scanner (System.in);
+      System.out.println("name:");
+      name =obj.next();
+      System.out.println("gender:");
+      gender=obj.next();
+      System.out.println("aadhar number:");
+      aadhar= obj.nextInt();
+   }
+ }
+class employee extends person
+{
+  public void getinformation ()
+  {
+    System.out.println ("employee details:");
+  }
+ public void CalculateTax ()
+  {
+    Scanner obj=new Scanner(System.in);
+    System.out.println("enter your income:");
+    income=obj.nextDouble();
+    if (gender == "male")
+      {
+	if (income >= 190000)
+	  {
+	    System.out.println ("nil");
+	  }
+	else if (income >= 200000)
+	  {
+	    tax = income * (10 % 100);
+	    System.out.println ("your tax is:" + tax);
+	  }
+	else if (income >= 500000)
+	  {
+	    tax = income * (20 % 100);
+	    System.out.println ("your tax is:" + tax);
+	  }
+	else if (income < 500000)
+	  {
+	    tax = income * (25 % 100);
+	    System.out.println ("your tax is:" + tax);
+	  }
+	else
+	  {
+	    System.out.println ("you are not this category");
+	  }
+      }
+    else if (gender == "female")
+      {
+	if (income >= 190000)
+	  {
+	    System.out.println ("tax is nil");
+	  }
+	else if (income >= 200000)
+	  {
+	    System.out.println ("tax is nil");
+	  }
+	else if (income >= 500000)
+	  {
+	    tax = income * (10 % 100);
+	    System.out.println ("your tax is:" + tax);
+	  }
+	else if (income < 500000)
+	  {
+	    tax = income * (20 % 100);
+	    System.out.println ("your tax is:" + tax);
+	  }
+	else
+	  {
+	    System.out.println ("you are not under this category");
+	  }
+      }
+      else
+      {
+	System.out.println ("not eligible");
+      }
+  }
+}
+  public class Main
+  {
+    public static void main (String[]args)
+    {
+      person e= new employee();
+      e.getinformation();
+      e.show();
+      e.CalculateTax();
+    }
+}
+// stack implementation
+tax calculation
+import java.util.*;
+abstract class person
+{
+   String name;
+    String gender;
+    int aadhar;
+    double income;
+    double tax; 
+ abstract void getinformation ();
+   abstract void CalculateTax ();
+   void show()
+   {
+     Scanner obj = new Scanner (System.in);
+      System.out.println("name:");
+      name =obj.next();
+      System.out.println("gender:");
+      gender=obj.next();
+      System.out.println("aadhar number:");
+      aadhar= obj.nextInt();
+   }
+ }
+class employee extends person
+{
+  public void getinformation ()
+  {
+    System.out.println ("employee details:");
+  }
+ public void CalculateTax ()
+  {
+    Scanner obj=new Scanner(System.in);
+    System.out.println("enter your income:");
+    income=obj.nextDouble();
+    if (gender == "male")
+      {
+	if (income >= 190000)
+	  {
+	    System.out.println ("nil");
+	  }
+	else if (income >= 200000)
+	  {
+	    tax = income * (10 % 100);
+	    System.out.println ("your tax is:" + tax);
+	  }
+	else if (income >= 500000)
+	  {
+	    tax = income * (20 % 100);
+	    System.out.println ("your tax is:" + tax);
+	  }
+	else if (income < 500000)
+	  {
+	    tax = income * (25 % 100);
+	    System.out.println ("your tax is:" + tax);
+	  }
+	else
+	  {
+	    System.out.println ("you are not this category");
+	  }
+      }
+    else if (gender == "female")
+      {
+	if (income >= 190000)
+	  {
+	    System.out.println ("tax is nil");
+	  }
+	else if (income >= 200000)
+	  {
+	    System.out.println ("tax is nil");
+	  }
+	else if (income >= 500000)
+	  {
+	    tax = income * (10 % 100);
+	    System.out.println ("your tax is:" + tax);
+	  }
+	else if (income < 500000)
+	  {
+	    tax = income * (20 % 100);
+	    System.out.println ("your tax is:" + tax);
+	  }
+	else
+	  {
+	    System.out.println ("you are not under this category");
+	  }
+      }
+      else
+      {
+	System.out.println ("not eligible");
+      }
+  }
+}
+  public class Main
+  {
+    public static void main (String[]args)
+    {
+      person e= new employee();
+      e.getinformation();
+      e.show();
+      e.CalculateTax();
+    }
+}
